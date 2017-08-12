@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FFToolModule"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = " This is some summary for FFToolModule"
 
 s.description  = <<-DESC 
@@ -17,8 +17,8 @@ s.description  = <<-DESC
   s.author    = "郑强飞"
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "0.0.1" }
-  s.source_files = "FFToolModule/FFToolModule/*.{h,m}"
+  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "0.0.2" }
+  s.source_files = "FFToolModule/FFToolModule/Files"
   s.requires_arc = true
 
 end
