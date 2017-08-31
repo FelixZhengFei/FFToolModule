@@ -13,6 +13,11 @@
 		7640983F1F3E9E0F002275B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7640983D1F3E9E0F002275B3 /* Main.storyboard */; };
 		764098411F3E9E0F002275B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764098401F3E9E0F002275B3 /* Assets.xcassets */; };
 		764098441F3E9E0F002275B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764098421F3E9E0F002275B3 /* LaunchScreen.storyboard */; };
+		766F063C1F57D83E00BCC314 /* BLMultiColorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F06331F57D83E00BCC314 /* BLMultiColorLoader.m */; };
+		766F063D1F57D83E00BCC314 /* GXRightAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F06351F57D83E00BCC314 /* GXRightAlertView.m */; };
+		766F063E1F57D83E00BCC314 /* UICalculationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F06371F57D83E00BCC314 /* UICalculationTool.m */; };
+		766F063F1F57D83E00BCC314 /* UIView+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F06391F57D83E00BCC314 /* UIView+WrongMessage.m */; };
+		766F06401F57D83E00BCC314 /* UIViewController+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F063B1F57D83E00BCC314 /* UIViewController+WrongMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,16 @@
 		764098401F3E9E0F002275B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		764098431F3E9E0F002275B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		764098451F3E9E0F002275B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766F06321F57D83E00BCC314 /* BLMultiColorLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLMultiColorLoader.h; sourceTree = "<group>"; };
+		766F06331F57D83E00BCC314 /* BLMultiColorLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLMultiColorLoader.m; sourceTree = "<group>"; };
+		766F06341F57D83E00BCC314 /* GXRightAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXRightAlertView.h; sourceTree = "<group>"; };
+		766F06351F57D83E00BCC314 /* GXRightAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXRightAlertView.m; sourceTree = "<group>"; };
+		766F06361F57D83E00BCC314 /* UICalculationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICalculationTool.h; sourceTree = "<group>"; };
+		766F06371F57D83E00BCC314 /* UICalculationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICalculationTool.m; sourceTree = "<group>"; };
+		766F06381F57D83E00BCC314 /* UIView+WrongMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WrongMessage.h"; sourceTree = "<group>"; };
+		766F06391F57D83E00BCC314 /* UIView+WrongMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WrongMessage.m"; sourceTree = "<group>"; };
+		766F063A1F57D83E00BCC314 /* UIViewController+WrongMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WrongMessage.h"; sourceTree = "<group>"; };
+		766F063B1F57D83E00BCC314 /* UIViewController+WrongMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WrongMessage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,16 @@
 		7640984C1F3E9E2A002275B3 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				766F06321F57D83E00BCC314 /* BLMultiColorLoader.h */,
+				766F06331F57D83E00BCC314 /* BLMultiColorLoader.m */,
+				766F06341F57D83E00BCC314 /* GXRightAlertView.h */,
+				766F06351F57D83E00BCC314 /* GXRightAlertView.m */,
+				766F06361F57D83E00BCC314 /* UICalculationTool.h */,
+				766F06371F57D83E00BCC314 /* UICalculationTool.m */,
+				766F06381F57D83E00BCC314 /* UIView+WrongMessage.h */,
+				766F06391F57D83E00BCC314 /* UIView+WrongMessage.m */,
+				766F063A1F57D83E00BCC314 /* UIViewController+WrongMessage.h */,
+				766F063B1F57D83E00BCC314 /* UIViewController+WrongMessage.m */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -159,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766F063D1F57D83E00BCC314 /* GXRightAlertView.m in Sources */,
+				766F063E1F57D83E00BCC314 /* UICalculationTool.m in Sources */,
+				766F063F1F57D83E00BCC314 /* UIView+WrongMessage.m in Sources */,
 				7640983C1F3E9E0F002275B3 /* ViewController.m in Sources */,
+				766F06401F57D83E00BCC314 /* UIViewController+WrongMessage.m in Sources */,
 				764098391F3E9E0E002275B3 /* AppDelegate.m in Sources */,
+				766F063C1F57D83E00BCC314 /* BLMultiColorLoader.m in Sources */,
 				764098361F3E9E0E002275B3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
