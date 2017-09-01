@@ -10,7 +10,7 @@ import UIKit
 
 extension UISearchBar {
 
-    convenience init(searchGifdelegate: UISearchBarDelegate, backgroundColor: UIColor, backgroundImage: UIImage) {
+   public convenience init(searchGifdelegate: UISearchBarDelegate, backgroundColor: UIColor, backgroundImage: UIImage) {
         self.init()
         delegate = searchGifdelegate
         placeholder = "搜索商品或企业名称"

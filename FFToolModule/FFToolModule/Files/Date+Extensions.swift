@@ -14,7 +14,7 @@ private let calendar = Calendar.current
 extension Date {
     
     /// 计算与当前系统时间偏差 delta 秒数的日期字符串
-    static func cz_dateString(delta: TimeInterval) -> String {
+   public static func cz_dateString(delta: TimeInterval) -> String {
         
         let date = Date(timeIntervalSinceNow: delta)
         
@@ -29,7 +29,7 @@ extension Date {
     /// - parameter string: Tue Sep 15 12:12:00 +0800 2015
     ///
     /// - returns: 日期
-    static func cz_sinaDate(string: String) -> Date? {
+   public static func cz_sinaDate(string: String) -> Date? {
         
         // 1. 设置日期格式
         dateFormatter.dateFormat = "EEE MMM dd HH:mm:ss zzz yyyy"
@@ -46,7 +46,7 @@ extension Date {
      MM-dd HH:mm(一年内)
      yyyy-MM-dd HH:mm(更早期)
      */
-    var cz_dateDescription: String {
+   public var cz_dateDescription: String {
         
         // 1. 判断日期是否是今天
         if calendar.isDateInToday(self) {

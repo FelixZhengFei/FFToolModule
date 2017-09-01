@@ -81,8 +81,8 @@ extension String {
     }
     
     // MARK: - 判断空
-    public static func isNULLOrEmpty(string:String) ->Bool {
-        if string.isEmpty || string == "" || string == "<null>" || string == "(null)" {
+    public func isNULLOrEmpty() ->Bool {
+        if self.isEmpty || self == "" || self == "<null>" || self == "(null)" {
             return true
         }
         return false
@@ -90,7 +90,7 @@ extension String {
     
     // MARK: - 计算文本的汉字数
     public func calculateChineseCountInString(string:String) ->Int64 {
-        if String.isNULLOrEmpty(string: string) {
+        if (string.isNULLOrEmpty()) {
             return 0
         }
         let len = string.characters.count
@@ -151,7 +151,7 @@ extension String {
     /// 从当前字符串中，提取链接和文本
     /// Swift 提供了`元组`，同时返回多个值
     /// 如果是 OC，可以返回字典／自定义对象／指针的指针
-    func cz_href() -> (link: String, text: String)? {
+    public  func cz_href() -> (link: String, text: String)? {
         
         // 0. 匹配方案
         let pattern = "<a href=\"(.*?)\".*?>(.*?)</a>"
@@ -170,7 +170,7 @@ extension String {
         return (link, text)
     }
     
-    func caleStringNeedSize(labelStr:String,font:UIFont) -> CGSize {
+    public  func caleStringNeedSize(labelStr:String,font:UIFont) -> CGSize {
         let statusLabelText: NSString = labelStr as NSString
         let size = CGSize(width: UIScreen.main.bounds.width - 2 * 18, height: CGFloat(MAXFLOAT))
         let dic = NSDictionary(object: font, forKey: NSFontAttributeName as NSCopying)

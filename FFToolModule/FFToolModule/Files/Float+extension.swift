@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension CGFloat {
-    func toFloat() -> Float {
+  public  func toFloat() -> Float {
         return Float(self)
     }
 }

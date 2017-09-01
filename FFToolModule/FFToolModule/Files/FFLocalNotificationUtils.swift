@@ -11,7 +11,7 @@ import UIKit
 
 class FFLocalNotificationUtils: NSObject {
     /** 添加创建并添加本地通知 */
-    class func addNotification(messageString:String) {
+   public static func addNotification(messageString:String) {
         // 初始化一个通知
         let localNoti = UILocalNotification()
         

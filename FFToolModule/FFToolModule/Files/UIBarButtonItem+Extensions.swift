@@ -19,7 +19,7 @@ extension UIBarButtonItem {
     /// - parameter isBack:   是否是返回按钮，如果是加上箭头
     ///
     /// - returns: UIBarButtonItem
-    convenience init(title: String, fontSize: CGFloat = 16, target: AnyObject?, action: Selector, isBack: Bool = false) {
+   public convenience init(title: String, fontSize: CGFloat = 16, target: AnyObject?, action: Selector, isBack: Bool = false) {
         let btn: UIButton = UIButton.cz_textButton(title, fontSize: fontSize, normalColor: UIColor.cz_color(withRed: 50, green: 152, blue: 255), highlightedColor: UIColor.orange)
         
         if isBack {
@@ -37,7 +37,7 @@ extension UIBarButtonItem {
         self.init(customView: btn)
     }
     
-    convenience init(imageName: String, target: AnyObject?, action: Selector) {
+   public convenience init(imageName: String, target: AnyObject?, action: Selector) {
         let btn : UIButton = UIButton(type: .custom)
         
             btn.setImage(UIImage(named: imageName), for: UIControlState(rawValue: 0))
