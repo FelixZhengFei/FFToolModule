@@ -1,7 +1,7 @@
 //
 //  UIScreen+CZAddition.m
 //
-//  Created by 刘凡 on 16/5/17.
+//  Created by itcast on 16/5/17.
 //  Copyright © 2016年 itcast. All rights reserved.
 //
 

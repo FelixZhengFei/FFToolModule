@@ -1,7 +1,7 @@
 //
 //  NSAttributedString+CZAdditon.h
 //
-//  Created by 刘凡 on 16/4/26.
+//  Created by itcast on 16/4/26.
 //  Copyright © 2016年 itcast. All rights reserved.
 //
 

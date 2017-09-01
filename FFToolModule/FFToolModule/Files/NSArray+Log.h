@@ -1,7 +1,7 @@
 //
 //  NSArray+Log.h
 //
-//  Created by 刘凡 on 16/5/18.
+//  Created by itcast on 16/5/18.
 //  Copyright © 2016年 itcast. All rights reserved.
 //
 

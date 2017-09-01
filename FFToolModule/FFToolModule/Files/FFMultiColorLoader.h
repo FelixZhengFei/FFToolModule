@@ -1,14 +1,14 @@
 //
-//  BLMultiColorLoader.h
-//  Demo
+//  FFMultiColorLoader.h
+//  FFToolModule
 //
-//  Created by Poonia on 12/09/15.
-//  Copyright (c) 2015 Babulal Poonia. All rights reserved.
+//  Created by  郑强飞 on 14/12/15.
+//  Copyright (c) 2014年 Zhenwei. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BLMultiColorLoader : UIView
+@interface FFMultiColorLoader : UIView
 
 /**
  * Array of UIColor

@@ -1,18 +1,19 @@
 //
-//  GXRightAlertView.m
-//  guanxinApp
+//  FFRightBlackAlertView.m
+//  FFToolModule
 //
 //  Created by  郑强飞 on 14/12/17.
-//  Copyright (c) 2014年 Zhenwei. All rights reserved.
+//  Copyright (c) 2014年 郑强飞. All rights reserved.
 //
 
-#import "GXRightAlertView.h"
+#import "FFRightBlackAlertView.h"
 
-@implementation GXRightAlertView
+@implementation FFRightBlackAlertView
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        viewHeight =40;
+        viewHeight = 40;
     }
     return self;
 }
@@ -20,8 +21,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        viewHeight =40;
-
+        viewHeight = 40;
     }
     return self;
 }
@@ -32,15 +32,10 @@
     [imageView startAnimating];
     [self addSubview:imageView];
     
-    
     imageView.layer.cornerRadius = 8;
-    //    self.imageView.layer.borderColor = RGB(221, 221, 221).CGColor;
     imageView.layer.borderColor = [UIColor clearColor].CGColor;
-    
     imageView.layer.masksToBounds = YES;
     [imageView.layer setBorderWidth:0.5];
-    
-    
     
     UILabel *textLable = [[UILabel alloc] init];
     textLable.backgroundColor = [UIColor clearColor];
@@ -51,23 +46,15 @@
     textLable.textColor = [UIColor whiteColor];
     textLable.lineBreakMode = NSLineBreakByWordWrapping;
     
+    CGFloat stringWidth = [wrongText sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}].width;
+    CGFloat offset= ceilf(stringWidth);
     
-//    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:14]};
-//    CGRect rect = [wrongText boundingRectWithSize:CGSizeMake(MAXFLOAT, viewHeight)
-//                                        options:NSStringDrawingUsesLineFragmentOrigin
-//                                     attributes:attributes
-//                                        context:nil];
-// //   return rect.size;
-//    CGSize titleSize = rect.size;
-    
-    CGFloat offset = [UICalculationTool calculateStringWidth:wrongText withFont:[UIFont systemFontOfSize:14]];
-
     CGFloat width = MAX(offset, 60);
     if (width > [[UIScreen mainScreen] bounds].size.width-40) {
         width =[[UIScreen mainScreen] bounds].size.width-40;
         viewHeight +=20;
         textLable.numberOfLines = 0;
-
+        
     } else {
         textLable.numberOfLines = 1;
     }
@@ -82,7 +69,7 @@
     [self addBlackImageView:alerText];
 }
 
--(void)removeImageAnimaiton {
+- (void)removeImageAnimaiton {
     if (self.subviews.count) {
         [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     }

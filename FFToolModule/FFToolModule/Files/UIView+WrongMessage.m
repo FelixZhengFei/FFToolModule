@@ -1,14 +1,14 @@
 //
 //  UIViewController+WrongMessage.m
-//  guanxinApp
+//  FFToolModule
 //
 //  Created by  郑强飞 on 14/12/15.
 //  Copyright (c) 2014年 Zhenwei. All rights reserved.
 //
 
 #import "UIView+WrongMessage.h"
-#import "BLMultiColorLoader.h"
-#import "GXRightAlertView.h"
+#import "FFMultiColorLoader.h"
+#import "FFRightBlackAlertView.h"
 
 #define animition_tag 14320
 #define animition_tag1 13420
@@ -17,10 +17,10 @@
 
 #pragma mark - Overlay Activity Indicator methods
 
--(void)showRunningActivity {
+- (void)showRunningActivity {
     self.userInteractionEnabled = NO;
-
-    BLMultiColorLoader* multiColorLoader = [[BLMultiColorLoader alloc] init];
+    
+    FFMultiColorLoader* multiColorLoader = [[FFMultiColorLoader alloc] init];
     multiColorLoader.frame = CGRectMake(([[UIScreen mainScreen] bounds].size.width-80)/2, ([[UIScreen mainScreen] bounds].size.height - 80-64)/2, 80, 80);
     multiColorLoader.tag = animition_tag;
     [self addSubview:multiColorLoader];
@@ -34,21 +34,18 @@
 
 - (void)hideRunningActivity {
     self.userInteractionEnabled = YES;
-    BLMultiColorLoader *multiColorLoader = (BLMultiColorLoader *) [self viewWithTag:animition_tag];
+    FFMultiColorLoader *multiColorLoader = (FFMultiColorLoader *) [self viewWithTag:animition_tag];
     [multiColorLoader stopAnimation];
     [multiColorLoader removeFromSuperview];
 }
 
-
 - (void)showWrongActivity:(NSString*)wrongText isHide:(BOOL)isHideAuto {
-
-    
     if ([@"" isEqual:wrongText] ||[@" " isEqual:wrongText] || wrongText == nil || [wrongText isEqual:@"(null)"] ||[wrongText isEqual:@"<null>"] || [wrongText isEqual:[NSNull null]]) {
         return ;
     }
     
     wrongText = [wrongText stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    GXRightAlertView* anminView = [[GXRightAlertView alloc] initWithFrame:CGRectMake(0, ([[UIScreen mainScreen] bounds].size.height - 80-64)/2, [[UIScreen mainScreen] bounds].size.width, 40)];
+    FFRightBlackAlertView* anminView = [[FFRightBlackAlertView alloc] initWithFrame:CGRectMake(0, ([[UIScreen mainScreen] bounds].size.height - 80-64)/2, [[UIScreen mainScreen] bounds].size.width, 40)];
     anminView.tag = animition_tag1;
     [self addSubview:anminView];
     [anminView startAnimate:wrongText];
@@ -57,7 +54,7 @@
 
 - (void)hideWrongActivity{
     self.userInteractionEnabled = YES;
-    GXRightAlertView *anminView = (GXRightAlertView *) [self viewWithTag:animition_tag1];
+    FFRightBlackAlertView *anminView = (FFRightBlackAlertView *) [self viewWithTag:animition_tag1];
     [anminView stopAnimate];
     [anminView removeFromSuperview];
 }

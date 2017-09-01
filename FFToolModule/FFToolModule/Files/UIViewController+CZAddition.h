@@ -1,7 +1,7 @@
 //
 //  UIViewController+CZAddition.h
 //
-//  Created by 刘凡 on 16/5/18.
+//  Created by itcast on 16/5/18.
 //  Copyright © 2016年 itcast. All rights reserved.
 //
 
@@ -16,5 +16,9 @@
  * @param view            要添加到的视图
  */
 - (void)cz_addChildController:(UIViewController *)childController intoView:(UIView *)view;
+
+
+//设置键盘消失手势
+- (void)setupForDismissKeyboard;
 
 @end

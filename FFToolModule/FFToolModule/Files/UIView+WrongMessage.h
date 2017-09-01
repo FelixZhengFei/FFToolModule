@@ -1,9 +1,9 @@
 //
 //  UIViewController+WrongMessage.h
-//  guanxinApp
+//  FFToolModule
 //
-//  Created by  郑强飞 on 14/12/15.
-//  Copyright (c) 2014年 Zhenwei. All rights reserved.
+//  Created by  郑强飞 on 14/12/17.
+//  Copyright (c) 2014年 郑强飞. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

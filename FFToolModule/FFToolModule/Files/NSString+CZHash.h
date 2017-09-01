@@ -1,7 +1,7 @@
 //
 //  NSString+Hash.h
 //
-//  Created by 刘凡 on 14/11/12.
+//  Created by itcast on 14/11/12.
 //  Copyright (c) 2014年 itcast. All rights reserved.
 //
 

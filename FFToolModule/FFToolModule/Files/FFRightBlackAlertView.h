@@ -1,16 +1,14 @@
 //
-//  GXRightAlertView.h
-//  guanxinApp
+//  FFRightBlackAlertView.h
+//  FFToolModule
 //
 //  Created by  郑强飞 on 14/12/17.
-//  Copyright (c) 2014年 Zhenwei. All rights reserved.
+//  Copyright (c) 2014年 郑强飞. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "UICalculationTool.h"
 
-@interface GXRightAlertView : UIView  {
-
+@interface FFRightBlackAlertView : UIView  {
     CGFloat viewHeight;
 }
 

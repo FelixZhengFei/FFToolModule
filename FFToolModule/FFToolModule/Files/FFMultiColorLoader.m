@@ -1,19 +1,19 @@
 //
-//  BLMultiColorLoader.m
-//  Demo
+//  FFMultiColorLoader.m
+//  FFToolModule
 //
-//  Created by Poonia on 12/09/15.
-//  Copyright (c) 2015 Babulal Poonia. All rights reserved.
+//  Created by  郑强飞 on 14/12/15.
+//  Copyright (c) 2014年 Zhenwei. All rights reserved.
 //
 
-#import "BLMultiColorLoader.h"
+#import "FFMultiColorLoader.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define ROUND_TIME 1.5
 #define DEFAULT_LINE_WIDTH 2.0
 #define DEFAULT_COLOR [UIColor orangeColor]
 
-@interface BLMultiColorLoader ()
+@interface FFMultiColorLoader ()
 
 @property (nonatomic, strong) CAShapeLayer *circleLayer;
 @property (nonatomic, strong) CAAnimationGroup *strokeLineAnimation;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation BLMultiColorLoader
+@implementation FFMultiColorLoader
 
 #pragma mark - Life Cycle
 - (instancetype)init {
