@@ -1,5 +1,5 @@
                        	FFToolModule 使用指南
-安装FFToolModule
+安装
 pod 'FFToolModule’, '~> 0.0.9’ 找到最新版本
 或者
 pod ‘FFToolModule’
