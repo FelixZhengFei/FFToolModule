@@ -1,8 +1,8 @@
-                       	FFToolModule 使用指南
-安装：
+                                      	FFToolModule 使用指南
+安装:
 
-  pod 'FFToolModule’, '~> 0.0.9’ 找到最新版本
-  pod ‘FFToolModule’
+    pod 'FFToolModule’, '~> 0.0.9’ 找到最新版本
+    pod ‘FFToolModule’
 
 
 1,xib协议
@@ -42,4 +42,4 @@
      CGFloat,Int,Double(金额格式化,大数字格式化)
      Dictionary(字典转换字符串)
      Date
-   
+5,后续功能
