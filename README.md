@@ -1,8 +1,8 @@
                        	FFToolModule 使用指南
-安装
-pod 'FFToolModule’, '~> 0.0.9’ 找到最新版本
+安装：
 
-pod ‘FFToolModule’
+  pod 'FFToolModule’, '~> 0.0.9’ 找到最新版本
+  pod ‘FFToolModule’
 
 
 1,xib协议
@@ -24,31 +24,22 @@ pod ‘FFToolModule’
 
 3,错误弹框
 
-
-   showWrongActivity
-   使用：
-   self.showWrongActivity("错误", isHide: true)
+     showWrongActivity
+     使用：
+     self.showWrongActivity("错误", isHide: true)
 
 4,类别 
-   UISearchBar 
-   
-   UIScreen 如UIScreen.cz_screenWidth()
-   
-   UILabel
-   
-   UIImage(添加文字水印,比率缩放,生成二维码图片,不透明图象,圆角)
-   
-   UIColor  如UIColor.rgb(1,1,1)
-   
-   UIButton
-   
-   UIBarButtonItem
-   
-   String  (手机号码验证,邮编号码的验证,邮箱验证,计算文本的汉字数,计数文本所需的高度,追加文档路径)
-   
-   CGFloat,Int,Double(金额格式化,大数字格式化)
-   
-   Dictionary(字典转换字符串)
-   
-   Date
+
+    
+     UISearchBar 
+     UIScreen 如UIScreen.cz_screenWidth()
+     UILabel
+     UIImage(添加文字水印,比率缩放,生成二维码图片,不透明图象,圆角)
+     UIColor  如UIColor.rgb(1,1,1)
+     UIButton
+     UIBarButtonItem
+     String  (手机号码验证,邮编号码的验证,邮箱验证,计算文本的汉字数,计数文本所需的高度,追加文档路径)
+     CGFloat,Int,Double(金额格式化,大数字格式化)
+     Dictionary(字典转换字符串)
+     Date
    
