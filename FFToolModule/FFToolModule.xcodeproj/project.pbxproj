@@ -28,6 +28,7 @@
 		7640983F1F3E9E0F002275B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7640983D1F3E9E0F002275B3 /* Main.storyboard */; };
 		764098411F3E9E0F002275B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764098401F3E9E0F002275B3 /* Assets.xcassets */; };
 		764098441F3E9E0F002275B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764098421F3E9E0F002275B3 /* LaunchScreen.storyboard */; };
+		765885531F5D328A009D4FA7 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765885521F5D328A009D4FA7 /* UIImageView+Extensions.swift */; };
 		766F063C1F57D83E00BCC314 /* FFMultiColorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F06331F57D83E00BCC314 /* FFMultiColorLoader.m */; };
 		766F063D1F57D83E00BCC314 /* FFRightBlackAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F06351F57D83E00BCC314 /* FFRightBlackAlertView.m */; };
 		766F063F1F57D83E00BCC314 /* UIView+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 766F06391F57D83E00BCC314 /* UIView+WrongMessage.m */; };
@@ -73,6 +74,7 @@
 		764098401F3E9E0F002275B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		764098431F3E9E0F002275B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		764098451F3E9E0F002275B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		765885521F5D328A009D4FA7 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		766F06321F57D83E00BCC314 /* FFMultiColorLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMultiColorLoader.h; sourceTree = "<group>"; };
 		766F06331F57D83E00BCC314 /* FFMultiColorLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMultiColorLoader.m; sourceTree = "<group>"; };
 		766F06341F57D83E00BCC314 /* FFRightBlackAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRightBlackAlertView.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				760BF0F01F5907B10036F616 /* UIColor+extension.swift */,
 				760BF0F11F5907B10036F616 /* UIImage+Extensions.swift */,
 				760BF0F21F5907B10036F616 /* UISearchBar+Extension.swift */,
+				765885521F5D328A009D4FA7 /* UIImageView+Extensions.swift */,
 				760BF0F31F5907B10036F616 /* UIView+extension.swift */,
 			);
 			name = Swfit_Extension;
@@ -328,6 +331,7 @@
 				766F06601F57D90C00BCC314 /* UIButton+CZAddition.m in Sources */,
 				760BF0F61F5907B10036F616 /* Dictionary+extension.swift in Sources */,
 				766F06631F57D90C00BCC314 /* UIScreen+CZAddition.m in Sources */,
+				765885531F5D328A009D4FA7 /* UIImageView+Extensions.swift in Sources */,
 				760BF0FB1F5907B10036F616 /* String+Extensions.swift in Sources */,
 				760BF1001F5907B10036F616 /* UIImage+Extensions.swift in Sources */,
 				760BF0F91F5907B10036F616 /* Float+extension.swift in Sources */,

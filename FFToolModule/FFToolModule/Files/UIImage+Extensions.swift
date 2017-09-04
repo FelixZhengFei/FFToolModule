@@ -26,6 +26,9 @@ extension UIImage {
         return reSizeImage(reSize: reSize)
     }
     
+    
+    
+    
     // MARK: - 添加图片水印方法
     //水印位置枚举
     public enum WaterMarkCorner {
@@ -103,7 +106,7 @@ extension UIImage {
     }
     
     // MARK: - 扩展UIImage，添加着色方法
-    func tint(color: UIColor, blendMode: CGBlendMode) -> UIImage {
+   public func tint(color: UIColor, blendMode: CGBlendMode) -> UIImage {
         let drawRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         //let context = UIGraphicsGetCurrentContext()
@@ -199,7 +202,7 @@ extension UIImage {
     /// - parameter backColor: 背景颜色
     ///
     /// - returns: 裁切后的图像
-    func cz_avatarImage(size: CGSize?, backColor: UIColor = UIColor.white, lineColor: UIColor = UIColor.lightGray) -> UIImage? {
+    public func ff_avatarImage(size: CGSize?, backColor: UIColor = UIColor.white, lineColor: UIColor = UIColor.lightGray) -> UIImage? {
         
         var size = size
         if size == nil || size?.width == 0 {
@@ -229,13 +232,30 @@ extension UIImage {
         return result
     }
     
+    //圆角
+    public func addImageRoundedCorner(radius: CGFloat, _ sizetoFit: CGSize) -> UIImage {
+        let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: sizetoFit)
+        
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.main.scale)
+        UIGraphicsGetCurrentContext()!.addPath(UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.allCorners,
+                                                            cornerRadii: CGSize(width: radius, height: radius)).cgPath)
+        UIGraphicsGetCurrentContext()?.clip()
+        self.draw(in: rect)
+        UIGraphicsGetCurrentContext()!.drawPath(using: .fillStroke)
+        let output = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return output!
+    }
+    
+    
     /// 生成指定大小的不透明图象
     ///
     /// - parameter size:      尺寸
     /// - parameter backColor: 背景颜色
     ///
     /// - returns: 图像
-    func cz_image(size: CGSize? = nil, backColor: UIColor = UIColor.white) -> UIImage? {
+    public func cz_image(size: CGSize? = nil, backColor: UIColor = UIColor.white) -> UIImage? {
         
         var size = size
         if size == nil {
@@ -257,7 +277,9 @@ extension UIImage {
         return result
     }
     
-    class func imageWithColor(color: UIColor, size: CGSize) -> UIImage {
+    
+    
+   public class func imageWithColor(color: UIColor, size: CGSize) -> UIImage {
         
         let rect  = CGRect(x: 0, y: 0, width: size.width == 0 ? 1.0 : size.width, height: size.height == 0 ? 1.0 : size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
@@ -268,7 +290,7 @@ extension UIImage {
         return image
     }
     
-    func resetImageSize(newWidth: CGFloat) -> UIImage {
+  public func resetImageSize(newWidth: CGFloat) -> UIImage {
         
         let scale = newWidth / self.size.width
         let newHeight = self.size.height * scale

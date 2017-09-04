@@ -11,6 +11,26 @@ import UIKit
 
 extension UIView {
     
+    // Bezier加圆角
+    open func viewAddBezierCorner(cornerRadius:CGFloat) {
+        let cornerSize: CGSize = CGSize(width: cornerRadius, height: cornerRadius)
+        let roundingCorners: UIRectCorner = [.bottomLeft,.bottomRight,.topLeft,.topRight]
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: roundingCorners, cornerRadii: cornerSize)
+        let cornerLayer = CAShapeLayer()
+        cornerLayer.frame = bounds
+        cornerLayer.path = path.cgPath
+        
+        layer.mask = cornerLayer
+    }
+    
+    // 传统加圆角
+    open func viewAddLayerCorner(cornerRadius: CGFloat) {
+        layer.cornerRadius = cornerRadius;//设置那个圆角的有多圆
+        layer.borderWidth = 0.5;//设置边框的宽度，当然可以不要
+        layer.borderColor = UIColor.init(red: 201, green: 201, blue: 201, alpha: 1).cgColor//设置边框的颜色
+        layer.masksToBounds = true;//设为NO去试试
+    }
+    
     private struct AssociatedKeys {
         static var tapViewTag = "tapViewTag"
         static var doubleTapViewTag = "doubleTapViewTag"
