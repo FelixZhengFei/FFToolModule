@@ -16,20 +16,26 @@ pod ‘FFToolModule’
  	  let view = HomePageInLoginBottomView.ff_LoadXib()
 
 2,本地通知
+
     FFLocalNotification_Plugin
     使用：
     FFLocalNotification_PluginaddNotification(“测试")
 
 3,错误弹框
+
    showWrongActivity
    使用：
    self.showWrongActivity("错误", isHide: true)
 
 4,类别 
    UISearchBar 
+   
    UIScreen 如UIScreen.cz_screenWidth()
+   
    UILabel
+   
    UIImage(添加文字水印,比率缩放,生成二维码图片,不透明图象,圆角)
+   
    UIColor  如UIColor.rgb(1,1,1)
    UIButton
    UIBarButtonItem
