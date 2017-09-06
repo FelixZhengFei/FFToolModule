@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		760D95B51F5F866700D1405D /* FFAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D95B31F5F866700D1405D /* FFAlert.m */; };
 		760D95EC1F5F898300D1405D /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D95B91F5F898300D1405D /* NSArray+Log.m */; };
 		760D95ED1F5F898300D1405D /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D95BB1F5F898300D1405D /* NSAttributedString+CZAdditon.m */; };
 		760D95EE1F5F898300D1405D /* NSObject+CZRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D95BD1F5F898300D1405D /* NSObject+CZRuntime.m */; };
@@ -41,6 +40,7 @@
 		760D960A1F5F898300D1405D /* FFRightBlackAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D95E71F5F898300D1405D /* FFRightBlackAlertView.m */; };
 		760D960B1F5F898300D1405D /* UIView+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D95E91F5F898300D1405D /* UIView+WrongMessage.m */; };
 		760D960C1F5F898300D1405D /* UIViewController+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D95EB1F5F898300D1405D /* UIViewController+WrongMessage.m */; };
+		760D96111F5F8CDE00D1405D /* FFAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 760D960F1F5F8CDE00D1405D /* FFAlert.m */; };
 		764098361F3E9E0E002275B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 764098351F3E9E0E002275B3 /* main.m */; };
 		764098391F3E9E0E002275B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 764098381F3E9E0E002275B3 /* AppDelegate.m */; };
 		7640983C1F3E9E0F002275B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7640983B1F3E9E0F002275B3 /* ViewController.m */; };
@@ -50,9 +50,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		760D95B21F5F866700D1405D /* FFAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlert.h; sourceTree = "<group>"; };
-		760D95B31F5F866700D1405D /* FFAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAlert.m; sourceTree = "<group>"; };
-		760D95B41F5F866700D1405D /* FFAlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlertHelper.h; sourceTree = "<group>"; };
 		760D95B71F5F898300D1405D /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
 		760D95B81F5F898300D1405D /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		760D95B91F5F898300D1405D /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
@@ -104,6 +101,9 @@
 		760D95E91F5F898300D1405D /* UIView+WrongMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WrongMessage.m"; sourceTree = "<group>"; };
 		760D95EA1F5F898300D1405D /* UIViewController+WrongMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WrongMessage.h"; sourceTree = "<group>"; };
 		760D95EB1F5F898300D1405D /* UIViewController+WrongMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WrongMessage.m"; sourceTree = "<group>"; };
+		760D960E1F5F8CDE00D1405D /* FFAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlert.h; sourceTree = "<group>"; };
+		760D960F1F5F8CDE00D1405D /* FFAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAlert.m; sourceTree = "<group>"; };
+		760D96101F5F8CDE00D1405D /* FFAlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlertHelper.h; sourceTree = "<group>"; };
 		764098311F3E9E0E002275B3 /* FFToolModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFToolModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764098351F3E9E0E002275B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		764098371F3E9E0E002275B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,16 +127,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		760D95B11F5F863800D1405D /* FFAlert */ = {
-			isa = PBXGroup;
-			children = (
-				760D95B21F5F866700D1405D /* FFAlert.h */,
-				760D95B31F5F866700D1405D /* FFAlert.m */,
-				760D95B41F5F866700D1405D /* FFAlertHelper.h */,
-			);
-			path = FFAlert;
-			sourceTree = "<group>";
-		};
 		760D95B61F5F898300D1405D /* OC_Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +199,16 @@
 			path = Wrong_Alert;
 			sourceTree = "<group>";
 		};
+		760D960D1F5F8CDE00D1405D /* FFAlert */ = {
+			isa = PBXGroup;
+			children = (
+				760D960E1F5F8CDE00D1405D /* FFAlert.h */,
+				760D960F1F5F8CDE00D1405D /* FFAlert.m */,
+				760D96101F5F8CDE00D1405D /* FFAlertHelper.h */,
+			);
+			path = FFAlert;
+			sourceTree = "<group>";
+		};
 		764098281F3E9E0E002275B3 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +228,7 @@
 		764098331F3E9E0E002275B3 /* FFToolModule */ = {
 			isa = PBXGroup;
 			children = (
+				760D960D1F5F8CDE00D1405D /* FFAlert */,
 				7640984C1F3E9E2A002275B3 /* Files */,
 				764098371F3E9E0E002275B3 /* AppDelegate.h */,
 				764098381F3E9E0E002275B3 /* AppDelegate.m */,
@@ -256,7 +257,6 @@
 				760D95B61F5F898300D1405D /* OC_Category */,
 				760D95D01F5F898300D1405D /* Swfit_Extension */,
 				760D95E31F5F898300D1405D /* Wrong_Alert */,
-				760D95B11F5F863800D1405D /* FFAlert */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -363,11 +363,11 @@
 				760D95ED1F5F898300D1405D /* NSAttributedString+CZAdditon.m in Sources */,
 				760D95FF1F5F898300D1405D /* Int+extension.swift in Sources */,
 				760D960C1F5F898300D1405D /* UIViewController+WrongMessage.m in Sources */,
+				760D96111F5F8CDE00D1405D /* FFAlert.m in Sources */,
 				760D95FA1F5F898300D1405D /* Dictionary+extension.swift in Sources */,
 				760D95F31F5F898300D1405D /* UIColor+CZAddition.m in Sources */,
 				760D95FB1F5F898300D1405D /* Double+extension.swift in Sources */,
 				764098391F3E9E0E002275B3 /* AppDelegate.m in Sources */,
-				760D95B51F5F866700D1405D /* FFAlert.m in Sources */,
 				760D96051F5F898300D1405D /* UIImage+Extensions.swift in Sources */,
 				764098361F3E9E0E002275B3 /* main.m in Sources */,
 				760D96041F5F898300D1405D /* UIColor+extension.swift in Sources */,
