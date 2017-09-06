@@ -18,7 +18,7 @@ s.description  = <<-DESC
   s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.0.6" }
-  s.source_files = "FFToolModule/FFToolModule/HeaderFile/*.{h,m,swift}"
+  s.source_files = "FFToolModule/FFToolModule/FF_HeaderFile/*.{h,m,swift}"
 
   s.subspec 'FF_Alert' do |ss|
     ss.source_files = "FFToolModule/FFToolModule/FF_Alert/*.{h,m,swift}"
