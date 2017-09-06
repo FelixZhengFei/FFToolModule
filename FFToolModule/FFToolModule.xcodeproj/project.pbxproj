@@ -49,6 +49,7 @@
 		76A478BF1F5FA2EE00CA351E /* UIViewController+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A4789D1F5FA2EE00CA351E /* UIViewController+WrongMessage.m */; };
 		76A478D01F5FC4A600CA351E /* UITextView+FFLimitCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478CD1F5FC4A600CA351E /* UITextView+FFLimitCounter.m */; };
 		76A478D11F5FC4A600CA351E /* UITextView+FFPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */; };
+		76A478D41F5FD35F00CA351E /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A478D31F5FD35F00CA351E /* FFSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		76A478CD1F5FC4A600CA351E /* UITextView+FFLimitCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+FFLimitCounter.m"; sourceTree = "<group>"; };
 		76A478CE1F5FC4A600CA351E /* UITextView+FFPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+FFPlaceHolder.h"; sourceTree = "<group>"; };
 		76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+FFPlaceHolder.m"; sourceTree = "<group>"; };
+		76A478D31F5FD35F00CA351E /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				76A478681F5FA2EE00CA351E /* FF_HeaderFile */,
 				76A478CB1F5FC4A600CA351E /* FF_TextView_PlaceHolder */,
+				76A478D21F5FD35900CA351E /* FF_SliderView */,
 				76A478641F5FA2EE00CA351E /* FF_Alert */,
 				76A4786A1F5FA2EE00CA351E /* FF_OC_Category */,
 				76A478831F5FA2EE00CA351E /* FF_Swfit_Extension */,
@@ -279,6 +282,14 @@
 			path = FF_TextView_PlaceHolder;
 			sourceTree = "<group>";
 		};
+		76A478D21F5FD35900CA351E /* FF_SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				76A478D31F5FD35F00CA351E /* FFSliderView.swift */,
+			);
+			path = FF_SliderView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,6 +402,7 @@
 				76A478B81F5FA2EE00CA351E /* UIImage+Extensions.swift in Sources */,
 				764098361F3E9E0E002275B3 /* main.m in Sources */,
 				76A478B71F5FA2EE00CA351E /* UIColor+extension.swift in Sources */,
+				76A478D41F5FD35F00CA351E /* FFSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
