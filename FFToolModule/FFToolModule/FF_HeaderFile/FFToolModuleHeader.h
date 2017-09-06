@@ -1,5 +1,5 @@
 //
-//  FFToolModouleHeader.h
+//  FFToolModuleHeader.h
 //
 //  Created by 郑强飞 on 2017/8/12.
 //  Copyright © 2017年 郑强飞. All rights reserved.
@@ -21,3 +21,5 @@
 #import "FFAlertHelper.h"
 #import "UIView+WrongMessage.h"
 #import "UIViewController+WrongMessage.h"
+#import "UITextView+FFPlaceHolder.h"
+#import "UITextView+FFLimitCounter.h"

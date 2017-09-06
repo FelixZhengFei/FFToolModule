@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FFToolModuleHeader.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view, typically from a nib.
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 60, 280, 80)];
+    textView.layer.borderWidth = 1;
+    textView.font = [UIFont systemFontOfSize:14];
+    textView.ff_placeHolder = @"我就是传说中的placehouder";
+    textView.ff_limitCount = 200;
+    [self.view addSubview:textView];
 }
 
 

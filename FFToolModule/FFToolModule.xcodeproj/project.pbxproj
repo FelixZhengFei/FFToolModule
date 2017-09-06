@@ -47,6 +47,8 @@
 		76A478BD1F5FA2EE00CA351E /* FFRightBlackAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478991F5FA2EE00CA351E /* FFRightBlackAlertView.m */; };
 		76A478BE1F5FA2EE00CA351E /* UIView+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A4789B1F5FA2EE00CA351E /* UIView+WrongMessage.m */; };
 		76A478BF1F5FA2EE00CA351E /* UIViewController+WrongMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A4789D1F5FA2EE00CA351E /* UIViewController+WrongMessage.m */; };
+		76A478D01F5FC4A600CA351E /* UITextView+FFLimitCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478CD1F5FC4A600CA351E /* UITextView+FFLimitCounter.m */; };
+		76A478D11F5FC4A600CA351E /* UITextView+FFPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +66,7 @@
 		76A478651F5FA2EE00CA351E /* FFAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlert.h; sourceTree = "<group>"; };
 		76A478661F5FA2EE00CA351E /* FFAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAlert.m; sourceTree = "<group>"; };
 		76A478671F5FA2EE00CA351E /* FFAlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAlertHelper.h; sourceTree = "<group>"; };
-		76A478691F5FA2EE00CA351E /* FFToolModouleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFToolModouleHeader.h; sourceTree = "<group>"; };
+		76A478691F5FA2EE00CA351E /* FFToolModuleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFToolModuleHeader.h; sourceTree = "<group>"; };
 		76A4786B1F5FA2EE00CA351E /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		76A4786C1F5FA2EE00CA351E /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		76A4786D1F5FA2EE00CA351E /* NSAttributedString+CZAdditon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CZAdditon.h"; sourceTree = "<group>"; };
@@ -114,6 +116,10 @@
 		76A4789B1F5FA2EE00CA351E /* UIView+WrongMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WrongMessage.m"; sourceTree = "<group>"; };
 		76A4789C1F5FA2EE00CA351E /* UIViewController+WrongMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WrongMessage.h"; sourceTree = "<group>"; };
 		76A4789D1F5FA2EE00CA351E /* UIViewController+WrongMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WrongMessage.m"; sourceTree = "<group>"; };
+		76A478CC1F5FC4A600CA351E /* UITextView+FFLimitCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+FFLimitCounter.h"; sourceTree = "<group>"; };
+		76A478CD1F5FC4A600CA351E /* UITextView+FFLimitCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+FFLimitCounter.m"; sourceTree = "<group>"; };
+		76A478CE1F5FC4A600CA351E /* UITextView+FFPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+FFPlaceHolder.h"; sourceTree = "<group>"; };
+		76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+FFPlaceHolder.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +152,9 @@
 		764098331F3E9E0E002275B3 /* FFToolModule */ = {
 			isa = PBXGroup;
 			children = (
-				76A478641F5FA2EE00CA351E /* FF_Alert */,
 				76A478681F5FA2EE00CA351E /* FF_HeaderFile */,
+				76A478CB1F5FC4A600CA351E /* FF_TextView_PlaceHolder */,
+				76A478641F5FA2EE00CA351E /* FF_Alert */,
 				76A4786A1F5FA2EE00CA351E /* FF_OC_Category */,
 				76A478831F5FA2EE00CA351E /* FF_Swfit_Extension */,
 				76A478951F5FA2EE00CA351E /* FF_Wrong_Alert */,
@@ -186,7 +193,7 @@
 		76A478681F5FA2EE00CA351E /* FF_HeaderFile */ = {
 			isa = PBXGroup;
 			children = (
-				76A478691F5FA2EE00CA351E /* FFToolModouleHeader.h */,
+				76A478691F5FA2EE00CA351E /* FFToolModuleHeader.h */,
 			);
 			path = FF_HeaderFile;
 			sourceTree = "<group>";
@@ -259,6 +266,17 @@
 				76A4789D1F5FA2EE00CA351E /* UIViewController+WrongMessage.m */,
 			);
 			path = FF_Wrong_Alert;
+			sourceTree = "<group>";
+		};
+		76A478CB1F5FC4A600CA351E /* FF_TextView_PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				76A478CC1F5FC4A600CA351E /* UITextView+FFLimitCounter.h */,
+				76A478CD1F5FC4A600CA351E /* UITextView+FFLimitCounter.m */,
+				76A478CE1F5FC4A600CA351E /* UITextView+FFPlaceHolder.h */,
+				76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */,
+			);
+			path = FF_TextView_PlaceHolder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +357,7 @@
 				76A4789F1F5FA2EE00CA351E /* NSArray+Log.m in Sources */,
 				76A478A41F5FA2EE00CA351E /* NSString+CZPath.m in Sources */,
 				76A478A31F5FA2EE00CA351E /* NSString+CZHash.m in Sources */,
+				76A478D11F5FC4A600CA351E /* UITextView+FFPlaceHolder.m in Sources */,
 				76A478AB1F5FA2EE00CA351E /* Bundle+Extensions.swift in Sources */,
 				76A4789E1F5FA2EE00CA351E /* FFAlert.m in Sources */,
 				76A478A81F5FA2EE00CA351E /* UIScreen+CZAddition.m in Sources */,
@@ -362,6 +381,7 @@
 				76A478A91F5FA2EE00CA351E /* UIView+CZAddition.m in Sources */,
 				76A478A01F5FA2EE00CA351E /* NSAttributedString+CZAdditon.m in Sources */,
 				76A478B21F5FA2EE00CA351E /* Int+extension.swift in Sources */,
+				76A478D01F5FC4A600CA351E /* UITextView+FFLimitCounter.m in Sources */,
 				76A478BF1F5FA2EE00CA351E /* UIViewController+WrongMessage.m in Sources */,
 				76A478AD1F5FA2EE00CA351E /* Dictionary+extension.swift in Sources */,
 				76A478A61F5FA2EE00CA351E /* UIColor+CZAddition.m in Sources */,
