@@ -20,8 +20,8 @@ extension UIBarButtonItem {
     ///
     /// - returns: UIBarButtonItem
    public convenience init(title: String, fontSize: CGFloat = 16, target: AnyObject?, action: Selector, isBack: Bool = false) {
-        let btn: UIButton = UIButton.cz_textButton(title, fontSize: fontSize, normalColor: UIColor.cz_color(withRed: 50, green: 152, blue: 255), highlightedColor: UIColor.orange)
-        
+        let btn : UIButton = UIButton(type: .custom)
+    
         if isBack {
             let imageName = "Back-icon_press"
             

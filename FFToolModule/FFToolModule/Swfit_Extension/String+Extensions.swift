@@ -180,7 +180,7 @@ extension String {
     
     
     //计数文本所需的高度
-    public func calStringheight(textString:String,widthLimit:CGFloat = UIScreen.cz_screenWidth(),font:UIFont = UIFont.systemFont(ofSize: 15)) -> CGFloat {
+    public func calStringheight(textString:String,widthLimit:CGFloat = UIScreen.main.bounds.width,font:UIFont = UIFont.systemFont(ofSize: 15)) -> CGFloat {
         let str = textString as NSString
         let rect = str.boundingRect(with: CGSize(width:widthLimit, height:CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
         return rect.height
