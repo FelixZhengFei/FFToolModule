@@ -20,13 +20,13 @@
 import Foundation
 import UIKit
 
-protocol FFLoadXibProtocol {
+public protocol FFLoadXibProtocol {
     
 }
 
-extension FFLoadXibProtocol where Self: UIView {
+public extension FFLoadXibProtocol where Self: UIView {
     ///提供加载XIB方法
-    static func ff_LoadXib(xibStr: String? = nil) -> Self {
+   public static func ff_LoadXib(xibStr: String? = nil) -> Self {
         return Bundle.main.loadNibNamed(xibStr ?? "\(self)", owner: nil, options: nil)?.last as! Self
     }
 }
