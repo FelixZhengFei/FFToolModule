@@ -42,19 +42,24 @@
      CGFloat,Int,Double(金额格式化,大数字格式化)
      Dictionary(字典转换字符串)
      Date
-5,FFAlert弹框
+5,FFAlert弹框 模仿LEEAlert
 
      oc版
+     
        Alert 使用方法
+       
           [FFAlert alert].cofing.XXXXX.XXXXX.FFShow();
+          
       ActionSheet 使用方法
+      
          [FFAlert actionSheet].cofing.XXXXX.XXXXX.FFShow();
          
     swift版
+    
                 let tempview:OpenPushView = OpenPushView(frame: CGRect(x: 0, y: 0, width: 280, height: 0))
                 tempview.closeBlock = {
                  FFAlert.close(completionBlock: nil)
-               }
+                }
 
                 _ =  FFAlert.alert().config
                      .ffCustomView(tempview)?
