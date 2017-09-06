@@ -1,5 +1,5 @@
 //
-//  FFLocalNotificationUtils.swift
+//  FFLocalNotification_Plugin.swift
 //  FFToolModule
 //
 //  Created by 郑强飞 on 16/11/17.
@@ -9,7 +9,7 @@
 
 import UIKit
 
-class FFLocalNotificationUtils: NSObject {
+class FFLocalNotification_Plugin: NSObject {
     /** 添加创建并添加本地通知 */
    public static func addNotification(messageString:String) {
         // 初始化一个通知
