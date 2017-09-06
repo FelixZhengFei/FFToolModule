@@ -69,6 +69,7 @@
                 _ =  FFAlert.alert().config
                      .ffCustomView(tempview)?
                      .ffHeaderInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))?
+                     .ffOpenAnimationStyle(FFAnimationStyle.orientationTop)?
                      .ffShow()
 
 6,TextView（placeHolder limitCount限制输入数）
