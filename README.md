@@ -79,5 +79,24 @@
             textView.ff_limitCount = 200
             
   
-  
-7，后续功能
+ 
+7 FFSliderView 
+
+        let one = TestVC()
+        let two = TestVC()
+        addChildViewController(one)
+        addChildViewController(two)
+        
+        let frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 64)
+        let titles = ["今天", "天气", "不错"]
+        let contentViews: [UIView] = [one.view, two.view]
+        
+        let sliderView: FFSliderView = FFSliderView(frame: frame, titles: titles, contentViews: contentViews)
+        sliderView.viewChangeClosure = { index in
+            print("视图切换，下标---", index)
+        }
+        sliderView.selectedIndex = 1 // 默认选中第2个
+        view.addSubview(sliderView)
+        
+        
+8，后续功能
