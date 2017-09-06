@@ -8,8 +8,11 @@
 1,xib协议
     
     专门用来加载xib 的通用协议 FFLoadXibProtocol 
+    
     使用：
-    遵守 ‘FFLoadXibProtocol’协议
+    
+      遵守 ‘FFLoadXibProtocol’协议
+     
     如：
   	 class HomePageInLoginBottomView: UIView,FFLoadXibProtocol {
  	  }
