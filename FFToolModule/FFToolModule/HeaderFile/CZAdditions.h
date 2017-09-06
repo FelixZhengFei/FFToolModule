@@ -19,8 +19,5 @@
 #import "NSArray+Log.h"
 #import "FFAlert.h"
 #import "FFAlertHelper.h"
-#import "FFToolModule-Swift.h"
 #import "UIView+WrongMessage.h"
 #import "UIViewController+WrongMessage.h"
-
-#import "FFToolModule-Swift.h"
