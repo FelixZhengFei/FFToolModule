@@ -1,7 +1,7 @@
                                       	FFToolModule 使用指南
 安装:
 
-    pod 'FFToolModule’, '~> 1.0.6’ 找到最新版本
+    pod 'FFToolModule’, '~> 1.0.7’ 找到最新版本
     pod ‘FFToolModule’
 
 
@@ -45,6 +45,8 @@
      CGFloat,Int,Double(金额格式化,大数字格式化)
      Dictionary(字典转换字符串)
      Date
+     
+     
 5,FFAlert弹框 模仿LEEAlert
 
      oc版
@@ -67,6 +69,15 @@
                 _ =  FFAlert.alert().config
                      .ffCustomView(tempview)?
                      .ffHeaderInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))?
+                     .ffOpenAnimationStyle(FFAnimationStyle.orientationTop)?
                      .ffShow()
 
-6，后续功能
+6,TextView（placeHolder limitCount限制输入数）
+
+
+            textView.ff_placeHolder = "我就是传说中的placehouder"
+            textView.ff_limitCount = 200
+            
+  
+  
+7，后续功能
