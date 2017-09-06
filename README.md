@@ -72,9 +72,11 @@
                      .ffShow()
 
 6,TextView（placeHolder limitCount限制输入数）
-          
+
+
             textView.ff_placeHolder = "我就是传说中的placehouder"
             textView.ff_limitCount = 200
             
-            
+  
+  
 7，后续功能
