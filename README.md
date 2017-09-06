@@ -1,7 +1,7 @@
                                       	FFToolModule 使用指南
 安装:
 
-    pod 'FFToolModule’, '~> 0.0.9’ 找到最新版本
+    pod 'FFToolModule’, '~> 1.0.6’ 找到最新版本
     pod ‘FFToolModule’
 
 
