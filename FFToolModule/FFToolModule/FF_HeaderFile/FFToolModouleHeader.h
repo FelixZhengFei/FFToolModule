@@ -1,8 +1,8 @@
 //
-//  CZAdditions.h
+//  FFToolModouleHeader.h
 //
-//  Created by itcast on 16/4/21.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Created by 郑强飞 on 2017/8/12.
+//  Copyright © 2017年 郑强飞. All rights reserved.
 //
 
 #import "UILabel+CZAddition.h"
