@@ -8,19 +8,20 @@
 # 1 xib协议
     
     ## 专门用来加载xib 的通用协议 FFLoadXibProtocol 
-    使用：
+  
   	 class HomePageInLoginBottomView: UIView,FFLoadXibProtocol {
  	  }
     
  	  let view = HomePageInLoginBottomView.ff_LoadXib()
 
 # 2 本地通知FFLocalNotification_Plugin
-      使用：
+
       FFLocalNotification_PluginaddNotification(“测试")
 
 # 3 错误弹框 showWrongActivity
-     使用：
+
      self.showWrongActivity("错误", isHide: true)
+     
 # 4 类别 
      UISearchBar 
      UIScreen 如UIScreen.cz_screenWidth()
@@ -59,12 +60,12 @@
 
 
 # 6 TextView（placeHolder limitCount限制输入数）
-      使用
+      
             textView.ff_placeHolder = "我就是传说中的placehouder"
             textView.ff_limitCount = 200
             
 # 7 FFSliderView 
-      使用
+      
         let one = TestVC()
         let two = TestVC()
         addChildViewController(one)
