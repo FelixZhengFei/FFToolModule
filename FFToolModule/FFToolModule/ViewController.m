@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "FFToolModuleHeader.h"
+#import "TestVC.h"
+#import "FFToolModule-Bridging-Header.h"
+#import "FFToolModule-Swift.h"
 
 @interface ViewController ()
 
@@ -17,10 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //    [self testWrongView];
     // [self textviewPlaceHolder];
     [self testCountDownButton];
-    
+    //    [self testFFSliderView];
 }
+
+//showWrongActivity
+- (void)testWrongView {
+    [self showWrongActivity:@"我就是测试下" isHide:YES];
+}
+
 
 //textview
 - (void)textviewPlaceHolder {
@@ -46,6 +56,8 @@
     [_countDownCode countDownButtonHandler:^(FFCountDownButton*sender, NSInteger tag) {
         sender.enabled = NO;
         NSLog(@"发送。。。。。");
+        [self showWrongActivity:@"我就是测试下" isHide:YES];
+        
         [sender startCountDownWithSecond:10];
         [sender countDownChanging:^NSString *(FFCountDownButton *countDownButton,NSUInteger second) {
             NSString *title = [NSString stringWithFormat:@"剩余%zd秒",second];
@@ -66,6 +78,19 @@
      */
 }
 
+//FFSliderView 分页功能
+
+- (void)testFFSliderView {
+    TestVC *one = [[TestVC alloc] init];
+    TestVC *two = [[TestVC alloc] init];
+    [self addChildViewController:one];
+    [self addChildViewController:two];
+    NSArray *titles = @[@"今天",@"民团"];
+    NSArray *contentViews = @[one.view,two.view];
+    
+    FFSliderView *sliderView = [[FFSliderView alloc] initWithFrame:CGRectMake(0, 0, 320, 400) titles:titles contentViews:contentViews];
+    [self.view addSubview:sliderView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

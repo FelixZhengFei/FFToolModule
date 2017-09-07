@@ -51,6 +51,8 @@
 		76A478D11F5FC4A600CA351E /* UITextView+FFPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */; };
 		76A478D41F5FD35F00CA351E /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A478D31F5FD35F00CA351E /* FFSliderView.swift */; };
 		76A4792A1F61318900CA351E /* FFCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A479291F61318900CA351E /* FFCountDownButton.m */; };
+		76A4792E1F61386100CA351E /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A4792C1F61386100CA351E /* TestVC.m */; };
+		76A4792F1F61386100CA351E /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A4792D1F61386100CA351E /* TestVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +127,9 @@
 		76A478D31F5FD35F00CA351E /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
 		76A479281F61318900CA351E /* FFCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCountDownButton.h; sourceTree = "<group>"; };
 		76A479291F61318900CA351E /* FFCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCountDownButton.m; sourceTree = "<group>"; };
+		76A4792B1F61386100CA351E /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		76A4792C1F61386100CA351E /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		76A4792D1F61386100CA351E /* TestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +175,9 @@
 				7640983A1F3E9E0F002275B3 /* ViewController.h */,
 				7640983B1F3E9E0F002275B3 /* ViewController.m */,
 				76A478631F5F9C5500CA351E /* FFToolModule-Bridging-Header.h */,
+				76A4792B1F61386100CA351E /* TestVC.h */,
+				76A4792C1F61386100CA351E /* TestVC.m */,
+				76A4792D1F61386100CA351E /* TestVC.xib */,
 				7640983D1F3E9E0F002275B3 /* Main.storyboard */,
 				764098401F3E9E0F002275B3 /* Assets.xcassets */,
 				764098421F3E9E0F002275B3 /* LaunchScreen.storyboard */,
@@ -363,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A4792F1F61386100CA351E /* TestVC.xib in Resources */,
 				764098441F3E9E0F002275B3 /* LaunchScreen.storyboard in Resources */,
 				764098411F3E9E0F002275B3 /* Assets.xcassets in Resources */,
 				7640983F1F3E9E0F002275B3 /* Main.storyboard in Resources */,
@@ -400,6 +409,7 @@
 				76A478B01F5FA2EE00CA351E /* FFLocalNotification_Plugin.swift in Sources */,
 				76A478AC1F5FA2EE00CA351E /* Date+Extensions.swift in Sources */,
 				76A478BE1F5FA2EE00CA351E /* UIView+WrongMessage.m in Sources */,
+				76A4792E1F61386100CA351E /* TestVC.m in Sources */,
 				76A478B31F5FA2EE00CA351E /* String+Extensions.swift in Sources */,
 				76A478BB1F5FA2EE00CA351E /* UIView+extension.swift in Sources */,
 				76A478A91F5FA2EE00CA351E /* UIView+CZAddition.m in Sources */,

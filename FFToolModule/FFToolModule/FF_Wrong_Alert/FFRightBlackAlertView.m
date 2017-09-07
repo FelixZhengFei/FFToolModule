@@ -28,7 +28,8 @@
 
 - (void)addBlackImageView:(NSString *)wrongText {
     UIImageView *imageView = [[UIImageView alloc]init];
-    imageView.image = [UIImage imageNamed:@"black_wrong_imageView"];
+//    imageView.image = [UIImage imageNamed:@"black_wrong_imageView"];
+    imageView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
     [imageView startAnimating];
     [self addSubview:imageView];
     
