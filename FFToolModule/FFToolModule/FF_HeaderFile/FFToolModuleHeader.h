@@ -5,6 +5,9 @@
 //  Copyright © 2017年 郑强飞. All rights reserved.
 //
 
+#define weakify(var)   __weak typeof(var) weakSelf = var
+#define strongify(var) __strong typeof(var) strongSelf = var
+
 #import "UILabel+CZAddition.h"
 #import "UIButton+CZAddition.h"
 #import "UIColor+CZAddition.h"
@@ -23,3 +26,4 @@
 #import "UIViewController+WrongMessage.h"
 #import "UITextView+FFPlaceHolder.h"
 #import "UITextView+FFLimitCounter.h"
+#import "FFCountDownButton.h"

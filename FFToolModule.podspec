@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FFToolModule"
-  s.version      = "1.0.8"
+  s.version      = "1.0.9"
   s.summary      = " This is some summary for FFToolModule"
 
 s.description  = <<-DESC 
@@ -17,7 +17,7 @@ s.description  = <<-DESC
   s.author    = "郑强飞"
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.0.8" }
+  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.0.9" }
   s.source_files = "FFToolModule/FFToolModule/FF_HeaderFile/*.{h,m,swift}"
 
   s.subspec 'FF_Alert' do |ss|
@@ -43,6 +43,11 @@ s.description  = <<-DESC
    s.subspec 'FF_Wrong_Alert' do |ss|
     ss.source_files = "FFToolModule/FFToolModule/FF_Wrong_Alert/*.{h,m,swift}"
   end
+
+  s.subspec 'FF_CountDownButton' do |ss|
+    ss.source_files = "FFToolModule/FFToolModule/FF_CountDownButton/*.{h,m,swift}"
+  end
+
   
   s.requires_arc = true
 

@@ -50,6 +50,7 @@
 		76A478D01F5FC4A600CA351E /* UITextView+FFLimitCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478CD1F5FC4A600CA351E /* UITextView+FFLimitCounter.m */; };
 		76A478D11F5FC4A600CA351E /* UITextView+FFPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */; };
 		76A478D41F5FD35F00CA351E /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A478D31F5FD35F00CA351E /* FFSliderView.swift */; };
+		76A4792A1F61318900CA351E /* FFCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A479291F61318900CA351E /* FFCountDownButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,8 @@
 		76A478CE1F5FC4A600CA351E /* UITextView+FFPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+FFPlaceHolder.h"; sourceTree = "<group>"; };
 		76A478CF1F5FC4A600CA351E /* UITextView+FFPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+FFPlaceHolder.m"; sourceTree = "<group>"; };
 		76A478D31F5FD35F00CA351E /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
+		76A479281F61318900CA351E /* FFCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCountDownButton.h; sourceTree = "<group>"; };
+		76A479291F61318900CA351E /* FFCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCountDownButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,7 @@
 		764098331F3E9E0E002275B3 /* FFToolModule */ = {
 			isa = PBXGroup;
 			children = (
+				76A479271F61315700CA351E /* FF_CountDownButton */,
 				76A478681F5FA2EE00CA351E /* FF_HeaderFile */,
 				76A478CB1F5FC4A600CA351E /* FF_TextView_PlaceHolder */,
 				76A478D21F5FD35900CA351E /* FF_SliderView */,
@@ -290,6 +294,15 @@
 			path = FF_SliderView;
 			sourceTree = "<group>";
 		};
+		76A479271F61315700CA351E /* FF_CountDownButton */ = {
+			isa = PBXGroup;
+			children = (
+				76A479281F61318900CA351E /* FFCountDownButton.h */,
+				76A479291F61318900CA351E /* FFCountDownButton.m */,
+			);
+			path = FF_CountDownButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +411,7 @@
 				76A478A61F5FA2EE00CA351E /* UIColor+CZAddition.m in Sources */,
 				76A478AE1F5FA2EE00CA351E /* Double+extension.swift in Sources */,
 				7640983C1F3E9E0F002275B3 /* ViewController.m in Sources */,
+				76A4792A1F61318900CA351E /* FFCountDownButton.m in Sources */,
 				764098391F3E9E0E002275B3 /* AppDelegate.m in Sources */,
 				76A478B81F5FA2EE00CA351E /* UIImage+Extensions.swift in Sources */,
 				764098361F3E9E0E002275B3 /* main.m in Sources */,
