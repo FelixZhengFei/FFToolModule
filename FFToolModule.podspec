@@ -3,10 +3,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "FFToolModule"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = " This is some summary for FFToolModule"
 
-s.description  = <<-DESC 
+  s.description  = <<-DESC 
                           FFToolModule 是一个用于保存一些常用工具,控件类,各类类别类的工具
                    DESC
 
@@ -17,7 +17,7 @@ s.description  = <<-DESC
   s.author    = "郑强飞"
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.1.0" }
+  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.1.1" }
   s.source_files = "FFToolModule/FFToolModule/FF_HeaderFile/*.{h,m,swift}"
 
   s.subspec 'FF_Alert' do |ss|
