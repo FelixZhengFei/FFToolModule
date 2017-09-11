@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //    [self testWrongView];
+        [self testWrongView];
     // [self textviewPlaceHolder];
     [self testCountDownButton];
     //    [self testFFSliderView];
@@ -28,7 +28,8 @@
 
 //showWrongActivity
 - (void)testWrongView {
-    [self showWrongActivity:@"我就是测试下" isHide:YES];
+    [self showWrongActivity:@"我就是测试下"];
+//    [self showRunningActivity];
 }
 
 
@@ -56,7 +57,7 @@
     [_countDownCode countDownButtonHandler:^(FFCountDownButton*sender, NSInteger tag) {
         sender.enabled = NO;
         NSLog(@"发送。。。。。");
-        [self showWrongActivity:@"我就是测试下" isHide:YES];
+        [self showWrongActivity:@"我就是测试下"];
         
         [sender startCountDownWithSecond:10];
         [sender countDownChanging:^NSString *(FFCountDownButton *countDownButton,NSUInteger second) {

@@ -12,7 +12,7 @@
 
 - (void)showRunningActivity;
 - (void)hideRunningActivity;
-- (void)showWrongActivity:(NSString*)wrongText isHide:(BOOL)isHideAuto;
+- (void)showWrongActivity:(NSString*)wrongText;
 - (void)hideWrongActivity;
 
 @end

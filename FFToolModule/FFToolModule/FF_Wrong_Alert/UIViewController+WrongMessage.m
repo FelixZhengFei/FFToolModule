@@ -12,6 +12,7 @@
 
 #define animition_tag 12220
 #define animition_tag1 13420
+#define kWindow [UIApplication sharedApplication].keyWindow
 
 @implementation UIViewController (WrongMessage)
 
@@ -36,21 +37,22 @@
     [multiColorLoader removeFromSuperview];
 }
 
-- (void)showWrongActivity:(NSString*)wrongText isHide:(BOOL)isHideAuto {
+- (void)showWrongActivity:(NSString*)wrongText {
     if ([@"" isEqual:wrongText] ||[@" " isEqual:wrongText] || wrongText == nil || [wrongText isEqual:@"(null)"] ||[wrongText isEqual:@"<null>"] || [wrongText isEqual:[NSNull null]]) {
         return ;
     }
     wrongText = [wrongText stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     FFRightBlackAlertView* anminView = [[FFRightBlackAlertView alloc] initWithFrame:CGRectMake(0, ([[UIScreen mainScreen] bounds].size.height - 80-64)/2, [[UIScreen mainScreen] bounds].size.width, 40)];
     anminView.tag = animition_tag1;
-    [self.view addSubview:anminView];
+//    [self.view addSubview:anminView];
+    [kWindow addSubview:anminView];
     [anminView startAnimate:wrongText];
     [self performSelector:@selector(hideWrongActivity) withObject:nil afterDelay:1.50f];
 }
 
 - (void)hideWrongActivity{
-    self.view.userInteractionEnabled = YES;
-    FFRightBlackAlertView *anminView = (FFRightBlackAlertView *) [self.view viewWithTag:animition_tag1];
+//    self.view.userInteractionEnabled = YES;
+    FFRightBlackAlertView *anminView = (FFRightBlackAlertView *) [kWindow viewWithTag:animition_tag1];
     [anminView stopAnimate];
     [anminView removeFromSuperview];
 }

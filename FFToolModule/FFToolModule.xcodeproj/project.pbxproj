@@ -53,6 +53,7 @@
 		76A4792A1F61318900CA351E /* FFCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A479291F61318900CA351E /* FFCountDownButton.m */; };
 		76A4792E1F61386100CA351E /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A4792C1F61386100CA351E /* TestVC.m */; };
 		76A4792F1F61386100CA351E /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A4792D1F61386100CA351E /* TestVC.xib */; };
+		76A479321F622A3800CA351E /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A479311F622A3800CA351E /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,8 @@
 		76A4792B1F61386100CA351E /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		76A4792C1F61386100CA351E /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		76A4792D1F61386100CA351E /* TestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
+		76A479301F622A3800CA351E /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		76A479311F622A3800CA351E /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				76A4786E1F5FA2EE00CA351E /* NSAttributedString+CZAdditon.m */,
 				76A4786F1F5FA2EE00CA351E /* NSObject+CZRuntime.h */,
 				76A478701F5FA2EE00CA351E /* NSObject+CZRuntime.m */,
+				76A479301F622A3800CA351E /* NSString+Extension.h */,
+				76A479311F622A3800CA351E /* NSString+Extension.m */,
 				76A478711F5FA2EE00CA351E /* NSString+CZBase64.h */,
 				76A478721F5FA2EE00CA351E /* NSString+CZBase64.m */,
 				76A478731F5FA2EE00CA351E /* NSString+CZHash.h */,
@@ -415,6 +420,7 @@
 				76A478A91F5FA2EE00CA351E /* UIView+CZAddition.m in Sources */,
 				76A478A01F5FA2EE00CA351E /* NSAttributedString+CZAdditon.m in Sources */,
 				76A478B21F5FA2EE00CA351E /* Int+extension.swift in Sources */,
+				76A479321F622A3800CA351E /* NSString+Extension.m in Sources */,
 				76A478D01F5FC4A600CA351E /* UITextView+FFLimitCounter.m in Sources */,
 				76A478BF1F5FA2EE00CA351E /* UIViewController+WrongMessage.m in Sources */,
 				76A478AD1F5FA2EE00CA351E /* Dictionary+extension.swift in Sources */,

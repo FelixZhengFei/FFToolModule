@@ -39,7 +39,7 @@
     [multiColorLoader removeFromSuperview];
 }
 
-- (void)showWrongActivity:(NSString*)wrongText isHide:(BOOL)isHideAuto {
+- (void)showWrongActivity:(NSString*)wrongText {
     if ([@"" isEqual:wrongText] ||[@" " isEqual:wrongText] || wrongText == nil || [wrongText isEqual:@"(null)"] ||[wrongText isEqual:@"<null>"] || [wrongText isEqual:[NSNull null]]) {
         return ;
     }

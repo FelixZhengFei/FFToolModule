@@ -151,7 +151,7 @@ extension String {
     /// 从当前字符串中，提取链接和文本
     /// Swift 提供了`元组`，同时返回多个值
     /// 如果是 OC，可以返回字典／自定义对象／指针的指针
-    public  func cz_href() -> (link: String, text: String)? {
+    public func cz_href() -> (link: String, text: String)? {
         
         // 0. 匹配方案
         let pattern = "<a href=\"(.*?)\".*?>(.*?)</a>"
@@ -170,7 +170,7 @@ extension String {
         return (link, text)
     }
     
-    public  func caleStringNeedSize(labelStr:String,font:UIFont) -> CGSize {
+    public static func caleStringNeedSize(labelStr:String,font:UIFont) -> CGSize {
         let statusLabelText: NSString = labelStr as NSString
         let size = CGSize(width: UIScreen.main.bounds.width - 2 * 18, height: CGFloat(MAXFLOAT))
         let dic = NSDictionary(object: font, forKey: NSFontAttributeName as NSCopying)
@@ -180,7 +180,7 @@ extension String {
     
     
     //计数文本所需的高度
-    public func calStringheight(textString:String,widthLimit:CGFloat = UIScreen.main.bounds.width,font:UIFont = UIFont.systemFont(ofSize: 15)) -> CGFloat {
+    public static func calStringheight(textString:String,widthLimit:CGFloat = UIScreen.main.bounds.width,font:UIFont = UIFont.systemFont(ofSize: 15)) -> CGFloat {
         let str = textString as NSString
         let rect = str.boundingRect(with: CGSize(width:widthLimit, height:CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
         return rect.height
