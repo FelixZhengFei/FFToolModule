@@ -19,10 +19,14 @@ extension UIBarButtonItem {
     /// - parameter isBack:   是否是返回按钮，如果是加上箭头
     ///
     /// - returns: UIBarButtonItem
-    public convenience init(title: String, fontSize: CGFloat = 16,textColor:UIColor = UIColor.cz_color(withRed: 66, green: 66, blue: 66), target: AnyObject?, action: Selector, isBack: Bool = false) {
-        let btn: UIButton = UIButton.cz_textButton(title, fontSize: fontSize, normalColor:textColor, highlightedColor: UIColor.black)
-        
-        
+    public convenience init(title: String, fontSize: CGFloat = 16,textColor:UIColor = UIColor.init(red: 66/255.0, green: 66/255.0, blue: 66/255.0, alpha: 66/255.0), target: AnyObject?, action: Selector, isBack: Bool = false) {
+        let btn : UIButton = UIButton(type: .custom)
+        btn.setTitle(title, for: .normal)
+        btn.setTitleColor(textColor, for: .normal)
+        btn.setTitleColor(textColor, for: .highlighted)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+        btn.sizeToFit()
+
         if isBack {
             let imageName = "Back-icon_press"
             

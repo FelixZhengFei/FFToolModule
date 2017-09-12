@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FFToolModule"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = " This is some summary for FFToolModule"
 
   s.description  = <<-DESC 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author    = "郑强飞"
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.1.1" }
+  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.1.2" }
   s.source_files = "FFToolModule/FFToolModule/FF_HeaderFile/*.{h,m,swift}"
 
   s.subspec 'FF_Alert' do |ss|
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     ss.source_files = "FFToolModule/FFToolModule/FF_TextView_PlaceHolder/*.{h,m,swift}"
   end
 
- s.subspec 'FF_OC_Category' do |ss|
+  s.subspec 'FF_OC_Category' do |ss|
     ss.source_files = "FFToolModule/FFToolModule/FF_OC_Category/*.{h,m,swift}"
   end
 
