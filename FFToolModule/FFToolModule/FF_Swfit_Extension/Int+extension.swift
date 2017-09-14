@@ -17,6 +17,14 @@ extension Int {
         return nf.string(from: NSNumber(value: self))!
     }
     
+    //MARK:金额格式化 12.00
+    public func toRMBBalanceFormat() -> String {
+        let nf = NumberFormatter()
+        nf.numberStyle = .currency
+        nf.currencySymbol = "￥"
+        return nf.string(from: NSNumber(value: self))!
+    }
+    
     //MARK:大数字格式化
     public func toBigString() -> String {
         if self < 10000 {

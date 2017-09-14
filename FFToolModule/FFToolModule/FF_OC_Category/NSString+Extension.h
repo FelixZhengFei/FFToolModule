@@ -60,5 +60,6 @@
 - (BOOL)isMaxLength:(NSUInteger)length;
 - (BOOL)isMinLength:(NSUInteger)min andMaxLength:(NSUInteger)max;
 - (BOOL)isEmpty;
-
+//身份证号
++ (BOOL)CheckIsIdentityCard: (NSString *)identityCard;
 @end

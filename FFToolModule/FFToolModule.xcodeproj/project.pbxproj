@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7633D5571F6A6AD00035A281 /* FFPassWordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7633D5541F6A6AD00035A281 /* FFPassWordTool.m */; };
+		7633D5581F6A6AD00035A281 /* FFKeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7633D5561F6A6AD00035A281 /* FFKeychainTool.m */; };
 		764098361F3E9E0E002275B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 764098351F3E9E0E002275B3 /* main.m */; };
 		764098391F3E9E0E002275B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 764098381F3E9E0E002275B3 /* AppDelegate.m */; };
 		7640983C1F3E9E0F002275B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7640983B1F3E9E0F002275B3 /* ViewController.m */; };
@@ -57,6 +59,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7633D5531F6A6AD00035A281 /* FFPassWordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPassWordTool.h; sourceTree = "<group>"; };
+		7633D5541F6A6AD00035A281 /* FFPassWordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPassWordTool.m; sourceTree = "<group>"; };
+		7633D5551F6A6AD00035A281 /* FFKeychainTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFKeychainTool.h; sourceTree = "<group>"; };
+		7633D5561F6A6AD00035A281 /* FFKeychainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFKeychainTool.m; sourceTree = "<group>"; };
 		764098311F3E9E0E002275B3 /* FFToolModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFToolModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764098351F3E9E0E002275B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		764098371F3E9E0E002275B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -219,6 +225,10 @@
 		76A4786A1F5FA2EE00CA351E /* FF_OC_Category */ = {
 			isa = PBXGroup;
 			children = (
+				7633D5531F6A6AD00035A281 /* FFPassWordTool.h */,
+				7633D5541F6A6AD00035A281 /* FFPassWordTool.m */,
+				7633D5551F6A6AD00035A281 /* FFKeychainTool.h */,
+				7633D5561F6A6AD00035A281 /* FFKeychainTool.m */,
 				76A4786B1F5FA2EE00CA351E /* NSArray+Log.h */,
 				76A4786C1F5FA2EE00CA351E /* NSArray+Log.m */,
 				76A4786D1F5FA2EE00CA351E /* NSAttributedString+CZAdditon.h */,
@@ -404,6 +414,7 @@
 				76A478A51F5FA2EE00CA351E /* UIButton+CZAddition.m in Sources */,
 				76A478B41F5FA2EE00CA351E /* UIAlertController+extension.swift in Sources */,
 				76A478A11F5FA2EE00CA351E /* NSObject+CZRuntime.m in Sources */,
+				7633D5581F6A6AD00035A281 /* FFKeychainTool.m in Sources */,
 				76A478A21F5FA2EE00CA351E /* NSString+CZBase64.m in Sources */,
 				76A478B91F5FA2EE00CA351E /* UIImageView+Extensions.swift in Sources */,
 				76A478B11F5FA2EE00CA351E /* Float+extension.swift in Sources */,
@@ -412,6 +423,7 @@
 				76A478AA1F5FA2EE00CA351E /* UIViewController+CZAddition.m in Sources */,
 				76A478BD1F5FA2EE00CA351E /* FFRightBlackAlertView.m in Sources */,
 				76A478B01F5FA2EE00CA351E /* FFLocalNotification_Plugin.swift in Sources */,
+				7633D5571F6A6AD00035A281 /* FFPassWordTool.m in Sources */,
 				76A478AC1F5FA2EE00CA351E /* Date+Extensions.swift in Sources */,
 				76A478BE1F5FA2EE00CA351E /* UIView+WrongMessage.m in Sources */,
 				76A4792E1F61386100CA351E /* TestVC.m in Sources */,

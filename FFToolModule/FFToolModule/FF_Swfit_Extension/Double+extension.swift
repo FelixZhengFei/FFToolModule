@@ -15,6 +15,14 @@ extension Double {
         return NSString(format: "%\(f)f" as NSString, self) as String
     }
     
+    //MARK:金额格式化 12.00
+    public func toRMBBalanceFormat() -> String {
+        let nf = NumberFormatter()
+        nf.numberStyle = .currency
+        nf.currencySymbol = "￥"
+        return nf.string(from: NSNumber(value: self))!
+    }
+    
     //MARK:金额格式化
     public func toBalanceFormat() -> String {
         let nf = NumberFormatter()
