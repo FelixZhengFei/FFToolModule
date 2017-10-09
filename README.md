@@ -85,9 +85,13 @@
         view.addSubview(sliderView)
         
         ``
-# 8，验证码倒计时
+# 8，密码存储
+
+
+        FFPassWordTool
+# 9，验证码倒计时
 
 
         FFCountDownButton
-
-# 9，后续功能
+        
+# 10，后续功能
