@@ -120,10 +120,11 @@ extension String {
         if len == -1 {
             len = characters.count - start
         }
-        let st = characters.index(startIndex, offsetBy:start)
-        let en = characters.index(st, offsetBy:len)
-        let range = st ..< en
-        return substring(with:range)
+//        let st = characters.index(startIndex, offsetBy:start)
+//        let en = characters.index(st, offsetBy:len)
+//        let range = st ..< en
+        
+        return subString(start: start, length: length)
     }
     
     // MARK: - 根据开始位置和长度替换
@@ -164,8 +165,8 @@ extension String {
         }
         
         // 2. 获取结果
-        let link = (self as NSString).substring(with: result.rangeAt(1))
-        let text = (self as NSString).substring(with: result.rangeAt(2))
+        let link = (self as NSString).substring(with: result.range(at: 1))
+        let text = (self as NSString).substring(with: result.range(at: 2))
         
         return (link, text)
     }
@@ -173,8 +174,8 @@ extension String {
     public static func caleStringNeedSize(labelStr:String,font:UIFont) -> CGSize {
         let statusLabelText: NSString = labelStr as NSString
         let size = CGSize(width: UIScreen.main.bounds.width - 2 * 18, height: CGFloat(MAXFLOAT))
-        let dic = NSDictionary(object: font, forKey: NSFontAttributeName as NSCopying)
-        let strSize = statusLabelText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [String : AnyObject], context:nil).size
+        let dic = NSDictionary(object: font, forKey: NSAttributedStringKey.font as NSCopying)
+        let strSize = statusLabelText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context:nil).size
         return strSize
     }
     
@@ -182,7 +183,7 @@ extension String {
     //计数文本所需的高度
     public static func calStringheight(textString:String,widthLimit:CGFloat = UIScreen.main.bounds.width,font:UIFont = UIFont.systemFont(ofSize: 15)) -> CGFloat {
         let str = textString as NSString
-        let rect = str.boundingRect(with: CGSize(width:widthLimit, height:CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
+        let rect = str.boundingRect(with: CGSize(width:widthLimit, height:CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font:font], context: nil)
         return rect.height
     }
 }

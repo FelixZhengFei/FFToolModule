@@ -59,10 +59,10 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
 @property (nonatomic , copy ) CGFloat (^modelMaxWidthBlock)(FFScreenOrientationType);
 @property (nonatomic , copy ) CGFloat (^modelMaxHeightBlock)(FFScreenOrientationType);
 
-@property (nonatomic , copy ) void(^modelOpenAnimationConfigBlock)(void (^animatingBlock)() , void (^animatedBlock)());
-@property (nonatomic , copy ) void(^modelCloseAnimationConfigBlock)(void (^animatingBlock)() , void (^animatedBlock)());
-@property (nonatomic , copy ) void (^modelFinishConfig)();
-@property (nonatomic , copy ) void (^modelCloseComplete)();
+@property (nonatomic , copy ) void(^modelOpenAnimationConfigBlock)(void (^animatingBlock)(void) , void (^animatedBlock)(void));
+@property (nonatomic , copy ) void(^modelCloseAnimationConfigBlock)(void (^animatingBlock)(void) , void (^animatedBlock)(void));
+@property (nonatomic , copy ) void (^modelFinishConfig)(void);
+@property (nonatomic , copy ) void (^modelCloseComplete)(void);
 
 @property (nonatomic , assign ) FFBackgroundStyle modelBackgroundStyle;
 @property (nonatomic , assign ) FFAnimationStyle modelOpenAnimationStyle;
@@ -206,7 +206,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     
     __weak typeof(self) weakSelf = self;
     
-    return ^(NSString *title , void(^block)()){
+    return ^(NSString *title , void(^block)(void)){
         
         return weakSelf.FFAddAction(^(FFAction *action) {
             
@@ -225,7 +225,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     
     __weak typeof(self) weakSelf = self;
     
-    return ^(NSString *title , void(^block)()){
+    return ^(NSString *title , void(^block)(void)){
         
         return weakSelf.FFAddAction(^(FFAction *action) {
             
@@ -246,7 +246,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     
     __weak typeof(self) weakSelf = self;
     
-    return ^(NSString *title , void(^block)()){
+    return ^(NSString *title , void(^block)(void)){
         
         return weakSelf.FFAddAction(^(FFAction *action) {
             
@@ -693,7 +693,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     
     __weak typeof(self) weakSelf = self;
     
-    return ^(void(^block)(void (^animatingBlock)() , void (^animatedBlock)())){
+    return ^(void(^block)(void (^animatingBlock)(void) , void (^animatedBlock)(void))){
         
         if (weakSelf) weakSelf.modelOpenAnimationConfigBlock = block;
         
@@ -706,7 +706,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     
     __weak typeof(self) weakSelf = self;
     
-    return ^(void(^block)(void (^animatingBlock)() , void (^animatedBlock)())){
+    return ^(void(^block)(void (^animatingBlock)(void) , void (^animatedBlock)(void))){
         
         if (weakSelf) weakSelf.modelCloseAnimationConfigBlock = block;
         
@@ -837,7 +837,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     
     __weak typeof(self) weakSelf = self;
     
-    return ^(void (^block)()){
+    return ^(void (^block)(void)){
         
         if (weakSelf) weakSelf.modelCloseComplete = block;
         
@@ -885,7 +885,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
 
 @protocol FFAlertProtocol <NSObject>
 
-- (void)closeWithCompletionBlock:(void (^)())completionBlock;
+- (void)closeWithCompletionBlock:(void (^)(void))completionBlock;
 
 @end
 
@@ -943,7 +943,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     [[FFAlert shareManager].queueArray removeAllObjects];
 }
 
-+ (void)closeWithCompletionBlock:(void (^)())completionBlock{
++ (void)closeWithCompletionBlock:(void (^)(void))completionBlock{
     
     if ([FFAlert shareManager].queueArray.count) {
         
@@ -1036,7 +1036,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
 
 @property (nonatomic , strong ) FFItem *item;
 
-@property (nonatomic , copy ) void (^textChangedBlock)();
+@property (nonatomic , copy ) void (^textChangedBlock)(void);
 
 + (FFItemLabel *)label;
 
@@ -1100,7 +1100,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
 
 @property (nonatomic , strong ) FFAction *action;
 
-@property (nonatomic , copy ) void (^heightChangedBlock)();
+@property (nonatomic , copy ) void (^heightChangedBlock)(void);
 
 + (FFActionButton *)button;
 
@@ -1348,7 +1348,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
 
 @property (nonatomic , assign ) CGSize size;
 
-@property (nonatomic , copy ) void (^sizeChangedBlock)();
+@property (nonatomic , copy ) void (^sizeChangedBlock)(void);
 
 @end
 
@@ -1359,7 +1359,7 @@ typedef NS_ENUM(NSInteger, FFBackgroundStyle) {
     if (_view) [_view removeObserver:self forKeyPath:@"frame"];
 }
 
-- (void)setSizeChangedBlock:(void (^)())sizeChangedBlock{
+- (void)setSizeChangedBlock:(void (^)(void))sizeChangedBlock{
     
     _sizeChangedBlock = sizeChangedBlock;
     
@@ -1597,9 +1597,9 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 @property (nonatomic , assign ) BOOL isClosing;
 
-@property (nonatomic , copy ) void (^openFinishBlock)();
+@property (nonatomic , copy ) void (^openFinishBlock)(void);
 
-@property (nonatomic , copy ) void (^closeFinishBlock)();
+@property (nonatomic , copy ) void (^closeFinishBlock)(void);
 
 @end
 
@@ -1663,7 +1663,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 #pragma mark start animations
 
-- (void)showAnimationsWithCompletionBlock:(void (^)())completionBlock{
+- (void)showAnimationsWithCompletionBlock:(void (^)(void))completionBlock{
     
     [self.currentKeyWindow endEditing:YES];
     
@@ -1672,7 +1672,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 #pragma mark close animations
     
-- (void)closeAnimationsWithCompletionBlock:(void (^)())completionBlock{
+- (void)closeAnimationsWithCompletionBlock:(void (^)(void))completionBlock{
     
     [[FFAlert shareManager].FFWindow endEditing:YES];
 }
@@ -2174,7 +2174,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
     
     BOOL isClose = NO;
     
-    void (^clickBlock)() = nil;
+    void (^clickBlock)(void) = nil;
     
     for (FFActionButton *button in self.alertActionArray) {
         
@@ -2232,7 +2232,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 #pragma mark start animations
 
-- (void)showAnimationsWithCompletionBlock:(void (^)())completionBlock{
+- (void)showAnimationsWithCompletionBlock:(void (^)(void))completionBlock{
     
     [super showAnimationsWithCompletionBlock:completionBlock];
     
@@ -2329,7 +2329,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 #pragma mark close animations
 
-- (void)closeAnimationsWithCompletionBlock:(void (^)())completionBlock{
+- (void)closeAnimationsWithCompletionBlock:(void (^)(void))completionBlock{
     
     [super closeAnimationsWithCompletionBlock:completionBlock];
     
@@ -2886,7 +2886,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
     
     BOOL isClose = NO;
     
-    void (^clickBlock)() = nil;
+    void (^clickBlock)(void) = nil;
     
     for (FFActionButton *button in self.actionSheetActionArray) {
         
@@ -2939,7 +2939,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 - (void)cancelButtonAction:(UIButton *)sender{
     
-    void (^clickBlock)() = self.actionSheetCancelAction.action.clickBlock;
+    void (^clickBlock)(void) = self.actionSheetCancelAction.action.clickBlock;
     
     [self closeAnimationsWithCompletionBlock:^{
         
@@ -2955,7 +2955,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 #pragma mark start animations
 
-- (void)showAnimationsWithCompletionBlock:(void (^)())completionBlock{
+- (void)showAnimationsWithCompletionBlock:(void (^)(void))completionBlock{
     
     [super showAnimationsWithCompletionBlock:completionBlock];
     
@@ -3063,7 +3063,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
 
 #pragma mark close animations
 
-- (void)closeAnimationsWithCompletionBlock:(void (^)())completionBlock{
+- (void)closeAnimationsWithCompletionBlock:(void (^)(void))completionBlock{
     
     [super closeAnimationsWithCompletionBlock:completionBlock];
     
@@ -3373,7 +3373,7 @@ static NSString *const FFShadowViewHandleKeyBackgroundColor = @"backgroundColor"
     
 }
 
-- (void)closeWithCompletionBlock:(void (^)())completionBlock{
+- (void)closeWithCompletionBlock:(void (^)(void))completionBlock{
     
     if ([FFAlert shareManager].viewController) [[FFAlert shareManager].viewController closeAnimationsWithCompletionBlock:completionBlock];
 }

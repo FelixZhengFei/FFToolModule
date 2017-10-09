@@ -75,10 +75,10 @@ extension UIImage {
                                  waterMarkTextFont:UIFont = UIFont.systemFont(ofSize: 20),
                                  backgroundColor:UIColor = UIColor.clear) -> UIImage{
         
-        let textAttributes = [NSForegroundColorAttributeName:waterMarkTextColor,
-                              NSFontAttributeName:waterMarkTextFont,
-                              NSBackgroundColorAttributeName:backgroundColor]
-        let textSize = NSString(string: waterMarkText).size(attributes: textAttributes)
+        let textAttributes = [NSAttributedStringKey.foregroundColor:waterMarkTextColor,
+                              NSAttributedStringKey.font:waterMarkTextFont,
+                              NSAttributedStringKey.backgroundColor:backgroundColor]
+        let textSize = NSString(string: waterMarkText).size(withAttributes: textAttributes)
         var textFrame = CGRect(x: 0, y: 0, width: textSize.width, height: textSize.height)
         
         let imageSize = self.size
@@ -169,7 +169,7 @@ extension UIImage {
         colorFilter!.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: "inputColor0")
         colorFilter!.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: "inputColor1")
         // 返回二维码image
-        let codeImage = UIImage(ciImage: colorFilter!.outputImage!.applying(CGAffineTransform(scaleX: 5, y: 5)))
+        let codeImage = UIImage(ciImage: colorFilter!.outputImage!.transformed(by: CGAffineTransform(scaleX: 5, y: 5)))
         // 通常,二维码都是定制的,中间都会放想要表达意思的图片
         if logoImage != nil {
             let rect = CGRect(x: 0, y: 0, width: codeImage.size.width, height: codeImage.size.height)

@@ -94,7 +94,7 @@ typedef NS_OPTIONS(NSInteger, FFAnimationStyle) {
     FFAnimationStyleZoomShrink         = 2 << 24,
 };
 
-typedef FFAlertConfigModel *(^FFConfig)();
+typedef FFAlertConfigModel *(^FFConfig)(void);
 typedef FFAlertConfigModel *(^FFConfigToBool)(BOOL is);
 typedef FFAlertConfigModel *(^FFConfigToInteger)(NSInteger number);
 typedef FFAlertConfigModel *(^FFConfigToFloat)(CGFloat number);
@@ -108,11 +108,11 @@ typedef FFAlertConfigModel *(^FFConfigToInterfaceOrientationMask)(UIInterfaceOri
 typedef FFAlertConfigModel *(^FFConfigToFloatBlock)(CGFloat(^)(FFScreenOrientationType type));
 typedef FFAlertConfigModel *(^FFConfigToAction)(void(^)(FFAction *action));
 typedef FFAlertConfigModel *(^FFConfigToCustomView)(void(^)(FFCustomView *custom));
-typedef FFAlertConfigModel *(^FFConfigToStringAndBlock)(NSString *str , void (^)());
+typedef FFAlertConfigModel *(^FFConfigToStringAndBlock)(NSString *str , void (^)(void));
 typedef FFAlertConfigModel *(^FFConfigToConfigLabel)(void(^)(UILabel *label));
 typedef FFAlertConfigModel *(^FFConfigToConfigTextField)(void(^)(UITextField *textField));
 typedef FFAlertConfigModel *(^FFConfigToItem)(void(^)(FFItem *item));
-typedef FFAlertConfigModel *(^FFConfigToBlock)(void(^block)());
-typedef FFAlertConfigModel *(^FFConfigToBlockAndBlock)(void(^)(void (^animatingBlock)() , void (^animatedBlock)()));
+typedef FFAlertConfigModel *(^FFConfigToBlock)(void(^block)(void));
+typedef FFAlertConfigModel *(^FFConfigToBlockAndBlock)(void(^)(void (^animatingBlock)(void) , void (^animatedBlock)(void)));
 
 #endif /* FFAlertHelper_h */

@@ -10,8 +10,9 @@
 #import "FFKeychainTool.h"
 
 @implementation FFPassWordTool
-static NSString * const KEY_IN_KEYCHAIN = @"com.chenyuan.app.userid";
-static NSString * const KEY_PASSWORD = @"com.chenyuan.app.password";
+
+static NSString * const KEY_IN_KEYCHAIN = @"com.weifengdai.app.userid";
+static NSString * const KEY_PASSWORD = @"com.weifengdai.app.password";
 
 +(void)savePassWord:(NSString *)password {
     NSMutableDictionary *usernamepasswordKVPairs = [NSMutableDictionary dictionary];
