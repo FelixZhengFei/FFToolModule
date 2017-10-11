@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FFToolModule"
-  s.version      = "1.1.6"
+  s.version      = "1.1.7"
   s.summary      = " This is some summary for FFToolModule"
 
   s.description  = <<-DESC 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author    = "郑强飞"
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.1.6" }
+  s.source       = { :git => "https://github.com/FelixZhengFei/FFToolModule.git", :tag => "1.1.7" }
   s.source_files = "FFToolModule/FFToolModule/FF_HeaderFile/*.{h,m,swift}"
 
   s.subspec 'FF_Alert' do |ss|
